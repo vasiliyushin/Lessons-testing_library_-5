@@ -1,3 +1,4 @@
+//урок 5
 //для запуска npm run test -- otus_lesson/specs/app.spec.js
 
 import { nameIsValid, fullTrim, getTotal } from "../src/app.js";
