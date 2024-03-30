@@ -1,5 +1,5 @@
 import client from './client'
-import config from '../tests.config'
+import config from '../../tests.config'
 
 const getUser = async (userId, token) => {
   const response = await client.get(`${config.url}Account/v1/User/${userId}`, {

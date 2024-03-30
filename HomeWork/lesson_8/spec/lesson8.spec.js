@@ -1,7 +1,7 @@
 import {test, expect} from "@jest/globals";
 import { faker } from '@faker-js/faker'
 import UserService from "../pageobjects/UserService";
-import config from "../tests.config";
+import config from "../../tests.config";
 
 //перед запуском тестов - генерируем ему логин и фиксируем в переменной 
 const userName = faker.internet.email().toLowerCase()
