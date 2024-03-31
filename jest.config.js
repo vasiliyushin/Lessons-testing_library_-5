@@ -193,6 +193,13 @@ const config = {
 
   // Whether to use watchman for file crawling
   // watchman: true,
+  reporters: [
+    'default', 'jest-allure'
+  ],
+  testRunner: 'jest-jasmine2',
+  setupFilesAfterEnv: [
+    'jest-allure/dist/setup',
+  ],
 }
 
 module.exports = config
