@@ -10,6 +10,7 @@ let uuid = '';
 let token = '';
 let isbn;
 let new_isbn;
+//тут обозначаю что у нас будет такая переменная
 let collectionOfIsbns;
 
 describe('Авторизация', () => {
@@ -47,7 +48,7 @@ describe('Получаем список книг, чтобы взять ISBN.', 
         // Фиксирует ISBN второй книги. На него будем апдейтить первый ISBN юзера.
         new_isbn = resBooksCollection.data.books[1].isbn;
         console.log(`new_isbn = ${new_isbn}`);
-        
+        //тут вероятно неправильно заполняю collectionOfIsbns
         collectionOfIsbns = [
           isbn
         ]

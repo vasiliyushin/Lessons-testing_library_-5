@@ -3,12 +3,13 @@ import config from '../../tests.config'
 
 const bookStoreAdd = async (token, userId, collectionOfIsbns) => {
   const response = await client.post(`BookStore/v1/Books`, {
+    userId,
+    collectionOfIsbns,
+  }, 
+  {
     headers: {
       Authorization: `Bearer ${token}`,
     },
-
-    userId,
-    collectionOfIsbns,
   })
 
   return {
@@ -20,12 +21,13 @@ const bookStoreAdd = async (token, userId, collectionOfIsbns) => {
 
 const bookStoreEdit = async (token, userId, isbn, new_isbn) => {
   const response = await client.post(`BookStore/v1/Books/${isbn}`, {
+    userId,
+    new_isbn,
+  }, 
+  {
     headers: {
       Authorization: `Bearer ${token}`,
     },
-
-    userId,
-    new_isbn,
   })
 
   return {
@@ -57,12 +59,13 @@ const bookStoreGet = async (isbn) => {
 
 const bookStoreDelete = async (token, isbn, userId) => {
   const response = await client.delete(`BookStore/v1/Book`, {
+    isbn,
+    userId,
+  }, 
+  {
     headers: {
       Authorization: `Bearer ${token}`,
     },
-
-    isbn,
-    userId,
   })
 
   return {
